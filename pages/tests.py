@@ -4,7 +4,7 @@ from django.urls import reverse
 
 class HomePageTestCase(SimpleTestCase):
     def test_url_exists_at_correct_location(self):
-        response = self.client.get("/home/")
+        response = self.client.get("/")
         self.assertEqual(response.status_code, 200)
     def test_url_available_by_name(self):
         responce = self.client.get(reverse("home"))

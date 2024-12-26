@@ -1,6 +1,16 @@
-{% extends "base.html" %} 
-{% block content %}
-
-<h1>Home Page</h1>
-<p1> This should fucking work this time </p>
-{% endblock content %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homepage</title>
+  </head>
+  <body>
+    {% extends "base.html" %} {% block content %}
+    <h1>Posts Will be Shown Here</h1>
+    <ul>
+      {% for post in posts %}
+      <li>{{ post.text }}</li>
+      {% endfor %}
+    </ul>
+    {% endblock content %}
+  </body>
+</html>
