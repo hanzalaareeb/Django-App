@@ -17,7 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from pages.views import HomePage, AboutPage, ContactPage
+from authentication.views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls')),  # Connect pages app URLs
+    path('', include('authentication.urls')),  # Connect authentication app URLs
 ]
