@@ -8,7 +8,7 @@ import secrets
 # Create your models here.
 
 
-def createCustomUser(AbstractUser):
+class createCustomUser(AbstractUser):
     email = models.EmailField(unique=True)
     
     USERNAME_FIELD = 'email'
