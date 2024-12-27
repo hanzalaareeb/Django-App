@@ -1,8 +1,10 @@
 from django.urls import path
-from .views import index
+from . import views 
 
 urlpatterns = [
-    path('', HomePage.as_view(), name='home'),  # Home page
-    path('about/', AboutPage.as_view(), name='about'),  # About page
-    path('contact/', ContactPage.as_view(), name='contact'),  # Contact page
+    path("", views.index, name="index"),
+    path("register", views.signUp, name="register"),
+    path("verify-email/<slug:username>", views.verify_account, name="verify-email"),
+    path("resend-otp", views.resend_token, name="resend-token"),
+    path("login", views.signin, name="signin")
 ]
